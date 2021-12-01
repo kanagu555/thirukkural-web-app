@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import Navbar from "./components/Navbar";
 
 function App() {
+  const [kural, setKural] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`https://api-thirukkural.vercel.app/api?num=1`)
+      .then((response) => {
+        console.log(response.data);
+        setKural(response.data);
+      });
+  }, []);
+
+ 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <h1>Thirukkural</h1>
+      <h3>{kural.chap_tam}</h3>
+      <h3>{kural.line1}</h3>
+      <h3>{kural.line2}</h3>
+      
     </div>
   );
 }
