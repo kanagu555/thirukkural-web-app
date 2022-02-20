@@ -1,0 +1,40 @@
+.flex-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flex-kural{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-size{
+    width: auto !important;
+    max-width: 600px;
+    min-width: 400px;  
+}
+
+.flex-cont{
+    display: flex;
+    justify-content: space-between;
+}
+
+.kural-cont{
+    font-size: large !important;
+    font-weight: bold;
+    margin: 20px 0px;
+}
+
+.prev-next-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.share-btn{
+    margin-top: 60px !important;
+}
