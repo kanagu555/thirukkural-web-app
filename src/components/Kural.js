@@ -22,7 +22,8 @@ const Kural = () => {
   };
 
   return (
-    <div className="flex-card">
+    <div className="flex-card bg-color">
+       <h1>Thirukkural</h1>
       <div className="ui input">
         <input type="text" className="form-control" />
         <button className="ui button">Search</button>
@@ -53,17 +54,19 @@ const Kural = () => {
             disabled={kuralNumber < 2}
             onClick={onPrevKural}
           >
+            <i className="angle left icon"></i>
             Previous Kural
           </button>
           <button className="ui primary button nxt-btn" onClick={onNxtKural}>
             Next Kural
+            <i className="angle right icon"></i>
           </button>
         </div>
       </div>
       <div className="ui buttons share-btn">
-        <button className="ui red button">Download Image</button>
+        <button className="ui red button">Download as Image</button>
         <div className="or"></div>
-        <button className="ui green button">Share Image</button>
+        <button className="ui green button">Share as Image</button>
       </div>
     </div>
   );

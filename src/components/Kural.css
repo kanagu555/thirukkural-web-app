@@ -1,3 +1,7 @@
+.bg-color{
+    background-color: gray;
+}
+
 .flex-card{
     display: flex;
     justify-content: center;
@@ -36,5 +40,5 @@
 
 
 .share-btn{
-    margin-top: 60px !important;
+    margin: 66px 0px !important;
 }
